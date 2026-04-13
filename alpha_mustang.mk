@@ -4,8 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
+
 # Inherit some common stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := mustang
@@ -19,11 +21,43 @@ PRODUCT_SYSTEM_BRAND := google
 PRODUCT_SYSTEM_MANUFACTURER := Google
 PRODUCT_SYSTEM_NAME := generic_system_google
 
-# Xtras
+#AlphaDroid Flags
+
+# Device config
 TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Build config
+
+# append time of day to zip
+ALPHA_VERSION_APPEND_TIME_OF_DAY := false
+
+# TARGET_BUILD_PACKAGE options:
+# 1 - vanilla (default)
+# 2 - microg
+# 3 - gapps
+TARGET_BUILD_PACKAGE := 3
+
+# (valid only for GAPPS builds)
+TARGET_INCLUDE_GOOGLE_COMMS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
 TARGET_SUPPORTS_QUICK_TAP := true
-WITH_GMS := true
-TARGET_IS_PIXEL := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+WITH_ADB_INSECURE := false
+
+# Extras
+TARGET_INCLUDE_SIMPLE_TUNE := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Oficial / Unoficial
+ALPHA_MAINTAINER := Unknown
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2992
