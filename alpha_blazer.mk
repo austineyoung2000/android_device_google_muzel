@@ -19,6 +19,42 @@ PRODUCT_SYSTEM_BRAND := google
 PRODUCT_SYSTEM_MANUFACTURER := Google
 PRODUCT_SYSTEM_NAME := generic_system_google
 
+#AlphaDroid Flags
+
+# Device config
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Build config
+
+# append time of day to zip
+ALPHA_VERSION_APPEND_TIME_OF_DAY := false
+
+# TARGET_BUILD_PACKAGE options:
+# 1 - vanilla (default)
+# 2 - microg
+# 3 - gapps
+TARGET_BUILD_PACKAGE := 3
+
+# (valid only for GAPPS builds)
+TARGET_INCLUDE_GOOGLE_COMMS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_HAS_UDFPS := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+WITH_ADB_INSECURE := false
+
+# Maintainer
+ALPHA_BUILD_TYPE := Oficial
+ALPHA_MAINTAINER := EliteDarkKaiser
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2856
 TARGET_SCREEN_WIDTH := 1280
