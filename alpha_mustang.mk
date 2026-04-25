@@ -53,7 +53,7 @@ TARGET_INCLUDE_MATLOG := true
 WITH_ADB_INSECURE := false
 
 # Maintainer
-ALPHA_BUILD_TYPE := Official
+ALPHA_BUILD_TYPE := Unofficial
 ALPHA_MAINTAINER := EliteDarkKaiser
 
 # Boot animation
