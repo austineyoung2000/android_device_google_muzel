@@ -4,8 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
+
 # Inherit some common stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := blazer
@@ -52,7 +54,7 @@ TARGET_INCLUDE_MATLOG := true
 WITH_ADB_INSECURE := false
 
 # Maintainer
-ALPHA_BUILD_TYPE := Official
+ALPHA_BUILD_TYPE := Unofficial
 ALPHA_MAINTAINER := EliteDarkKaiser
 
 # Boot animation
