@@ -23,6 +23,11 @@ AXION_CAMERA_FRONT_INFO := 42
 AXION_MAINTAINER ?= EliteDarkKaiser
 AXION_PROCESSOR := Tensor_G5
 
+# Enables Google Face Unlock (GFU)
+TARGET_SUPPORTS_GFU := true
+# Device Supports Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2992
 TARGET_SCREEN_WIDTH := 1344
